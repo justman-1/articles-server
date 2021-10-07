@@ -1,0 +1,26 @@
+const express = require('express')
+const router = express.Router()
+
+const adminCheck = require('./adminCheck')
+const addPost = require('./addPost')
+const getPostsAdmin = require('./getPostsAdmin')
+const getPosts = require('./getPosts')
+const getPostPreview = require('./getPostPreview')
+const getPost = require('./getPost')
+const deletePost = require('./deletePost')
+const getVideo = require('./getVideo')
+const uploadImage = require('./uploadImage')
+const uploadVideo = require('./uploadVideo')
+
+router.use('/adminCheck', adminCheck)
+router.use('/addPost', addPost)
+router.use('/getPostsAdmin', getPostsAdmin)
+router.use('/getPosts', getPosts)
+router.use('/getPostPreview', getPostPreview)
+router.use('/getPost', getPost)
+router.use('/deletePost', deletePost)
+router.use('/getVideo', getVideo)
+router.use('/uploadImage', uploadImage)
+router.use('/uploadVideo', uploadVideo)
+
+module.exports = router
